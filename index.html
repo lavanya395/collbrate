@@ -1,42 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Simple HTML Page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Cartoon Face</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+        }
+        .face {
+            width: 200px;
+            height: 200px;
+            background: #ffcc80;
+            border-radius: 50%;
+            position: relative;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        .eye {
+            width: 40px;
+            height: 40px;
+            background: #000;
+            border-radius: 50%;
+            position: absolute;
+            top: 60px;
+        }
+        .eye.left {
+            left: 50px;
+        }
+        .eye.right {
+            right: 50px;
+        }
+        .smile {
+            width: 100px;
+            height: 50px;
+            border-bottom: 5px solid #000;
+            border-radius: 0 0 50px 50px;
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to My Simple HTML Page</h1>
-  </header>
-
-  <nav>
-    <ul>
-      <li><a href="#section1">Section One</a></li>
-      <li><a href="#section2">Section Two</a></li>
-      <li><a href="#section3">Section Three</a></li>
-    </ul>
-  </nav>
-
-  <main>
-    <section id="section1">
-      <h2>Section One</h2>
-      <p>This is the first section of the page.</p>
-    </section>
-
-    <section id="section2">
-      <h2>Section Two</h2>
-      <p>This is the second section with some content.</p>
-    </section>
-
-    <section id="section3">
-      <h2>Section Three</h2>
-      <p>Here is the third section for more information.</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Simple HTML Page. All rights reserved.</p>
-  </footer>
+    <div class="face">
+        <div class="eye left"></div>
+        <div class="eye right"></div>
+        <div class="smile"></div>
+    </div>
 </body>
 </html>
